@@ -1,20 +1,49 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Biglietto Treno Form</title>
-    <link rel="stylesheet" href="css/style.css">
-</head>
-<body>
-    <main>
-        <div class="container">
-            <h1>CALCOLA IL PREZZO DEL TUO BIGLIETTO</h1>
-            <div class="interface-generator"></div>
-        </div>
-    </main>
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Biglietto Treno Form</title>
+        <link rel="stylesheet" href="css/style.css">
+    </head>
+    <body>
+        <main>
+            <div class="container">
+                <h1>CALCOLA IL PREZZO DEL TUO BIGLIETTO</h1>
+                <form action="" class="interface-generator">
+                    <!-- Parte top del form -->
+                    <div class="d-flex justify-sp-evenly">
+                        <div>
+                            <span>Nome Cognome</span>
+                            <input type="text">
+                        </div>
+                        <div>
+                            <span>Km da percorrere</span>
+                            <input type="number">
+                        </div>
+                        <div>
+                            <span>Fascia d'età</span>
+                            <select name="" id="">
+                                <option value="" selected disabled hidden>Seleziona</option>
+                                <option value="">Maggiorenne</option>
+                                <option value="">Minorenne</option>
+                                <option value="">Over 65</option>
+                            </select>
+                        </div>
+                    </div>
+                    <!-- /Parte top del form -->
 
-    <script src="js/script.js"></script>
-</body>
+                    <!-- Parte bottom del form -->
+                    <div class="buttons-section d-flex">
+                        <button type="button" class="btn">Genera</button>
+                        <button type="reset" class="btn">Annulla</button>
+                    </div>
+                    <!-- /Parte bottom del form -->
+                </form>
+            </div>
+        </main>
+
+        <script src="js/script.js"></script>
+    </body>
 </html>

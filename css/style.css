@@ -8,6 +8,29 @@
 }
 
 /*------------
+    COMMON 
+------------*/
+.d-flex{
+    display: flex;
+}
+
+.justify-sp-evenly{
+    justify-content: space-evenly;
+}
+
+.btn{
+    background-color: transparent;
+    border: 1px solid black;
+    color: #b91450;
+    background-color: #cccccc;
+    padding: .3125rem .625rem;
+    border-radius: .125rem;
+    font-weight: bold;
+    cursor: pointer;
+    margin: 2.1875rem .625rem 0 .625rem; 
+}
+
+/*------------
   TYPOGRAPHY 
 ------------*/
 h1{
@@ -28,5 +51,39 @@ main {
     width: 62.5rem;
     margin: auto;
     background-color: #b91450;
-    height: 500px;
+    height: 31.25rem;
+}
+
+.interface-generator{
+    background-color: white;
+    margin: 0 4.6875rem;
+    border-radius: .625rem;
+    padding: .9375rem 0;
+}
+
+.interface-generator span{
+    display: block;
+    color: #b91450;
+    text-align: center;
+    margin-bottom: .9375rem;
+    font-weight: bold;
+}
+
+.interface-generator input{
+    text-align: center;
+}
+
+.interface-generator input:focus, select:focus{
+    outline-color: #b91450;
+}
+
+.interface-generator input, select{
+    border: nones;
+    border: 1px solid #b91450;
+    padding: .3125rem .125rem;
+    font-weight: bold;
+}
+
+.buttons-section{
+    justify-content: center;
 }
