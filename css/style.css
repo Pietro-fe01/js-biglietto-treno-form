@@ -1,0 +1,32 @@
+/*------------
+    RESET 
+------------*/
+*{
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+}
+
+/*------------
+  TYPOGRAPHY 
+------------*/
+h1{
+    color: white;
+    text-align: center;
+    padding: .9375rem 0;
+}
+
+/*------------
+    MAIN  
+------------*/
+main {
+    display: flex;
+    height: 100vh;
+}
+
+.container {
+    width: 62.5rem;
+    margin: auto;
+    background-color: #b91450;
+    height: 500px;
+}
