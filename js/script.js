@@ -56,7 +56,7 @@ buttonGenerator.addEventListener("click", function(){
     document.getElementById("cp-code").innerHTML = cpCodeGenerator();
 
     // Funzione che calcola il prezzo finale in base alla fascia d'età e i km scelti
-    document.getElementById("final-cost").innerHTML = totalCost(kmToDo, selectBody);
+    document.getElementById("final-cost").innerHTML = `${totalCost(kmToDo, selectBody)} €`;
 });
 
 buttonReset.addEventListener("click", function(){
@@ -88,12 +88,12 @@ function totalCost(kmToDo, selectBody){
     let price;
     if ( selectBody.value === "maggiorenne" ) {
         price = 0.21 * kmToDo;
-        return price;
+        return parseFloat(price).toFixed(2);
     } else if ( selectBody.value === "minorenne" ) {
         price = (0.21 * kmToDo) - (0.21 * kmToDo * 0.2);
-        return price.toFixed(2);
+        return parseFloat(price).toFixed(2);
     } else {
         price = (0.21 * kmToDo) - (0.21 * kmToDo * 0.4);
-        return price.toFixed(2);
+        return parseFloat(price).toFixed(2);
     } 
 }
