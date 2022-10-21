@@ -18,6 +18,14 @@
     justify-content: space-evenly;
 }
 
+.f-bold{
+    font-weight: bold;
+}
+
+.m-l-20{
+    margin-left: 1.25rem;
+}
+
 .btn{
     background-color: transparent;
     border: 1px solid black;
@@ -33,7 +41,11 @@
 /*------------
   TYPOGRAPHY 
 ------------*/
-h1{
+body{
+    background-color: black;
+}
+
+h1, h2{
     color: white;
     text-align: center;
     padding: .9375rem 0;
@@ -57,6 +69,7 @@ main {
 .interface-generator{
     background-color: white;
     margin: 0 4.6875rem;
+    margin-bottom: .9375rem;
     border-radius: .625rem;
     padding: .9375rem 0;
 }
@@ -86,4 +99,26 @@ main {
 
 .buttons-section{
     justify-content: center;
+}
+
+.info-container{
+    margin: 0 1.25rem;
+    border-top: 1px solid #c6c6c6;
+    border-bottom: 1px solid #c6c6c6;
+    height: 6.25rem;
+}
+
+.customer-name{
+    background-color: #808080;
+}
+
+.ticket-details{
+    justify-content: center;
+    flex-grow: 1;
+    justify-content: space-between;
+}
+
+.customer-name,
+.ticket-details {
+    padding: 1.25rem .9375rem;
 }
