@@ -63,13 +63,13 @@ main {
     width: 62.5rem;
     margin: auto;
     background-color: #b91450;
-    height: 31.25rem;
+    /* height: 31.25rem; */
 }
 
 .interface-generator{
     background-color: white;
     margin: 0 4.6875rem;
-    margin-bottom: .9375rem;
+    margin-bottom: 1.875rem;
     border-radius: .625rem;
     padding: .9375rem 0;
 }
@@ -122,3 +122,8 @@ main {
 .ticket-details {
     padding: 1.25rem .9375rem;
 }
+
+/* PER FAR SCOMPARIRE IL BIGLIETTO GENERATO */
+/* .ticket{
+    display: none;
+} */
