@@ -124,6 +124,6 @@ main {
 }
 
 /* PER FAR SCOMPARIRE IL BIGLIETTO GENERATO */
-/* .ticket{
+.ticket-d-none{
     display: none;
-} */
+}

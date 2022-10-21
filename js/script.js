@@ -19,3 +19,57 @@ Il recap dei dati e l'output del prezzo finale, andranno quindi
 stampati in pagina (il prezzo dovrà essere formattato con massimo 
 due decimali, per indicare i centesimi sul prezzo). 
 Questo richiederà un minimo di ricerca.*/
+
+const buttonGenerator = document.getElementById("button-generator");
+
+const buttonReset = document.getElementById("button-reset");
+
+let showTicket = document.getElementById("show-ticket");
+
+let price;
+
+buttonGenerator.addEventListener("click", function(){
+    const fullName = document.getElementById("full-name-input").value;
+    let kmToDo = Number(document.getElementById("km-to-do").value);
+    let selectBody = document.getElementById("select-body");
+
+    //Comando che fa aprire o chiudere il biglietto generato
+    if ( fullName === ""){
+        alert("Attenzione! Il campo 'Nome Cognome' non può essere lasciato vuoto.");
+    } else if ( kmToDo === 0){
+        alert("Attenzione! Il campo 'Km da percorrere' non può essere lasciato vuoto.");
+    } else if (selectBody.value === "default"){
+        alert("Attenzione! Seleziona una fascia di età.");
+    } else {
+        showTicket.classList.remove("ticket-d-none");
+    }
+    //Comando che fa aprire o chiudere il biglietto generato
+
+    document.getElementById("customer-name").innerHTML = (fullName);
+
+    // Funzione che Controlla la fascia età selezionata e applica le varie tariffe
+    offertaType(selectBody);
+
+    // Funzione che genera un numero random da 0 a 10 e lo stampa nella voce carrozza
+    document.getElementById("carrozza-number").innerHTML = numCarrozzaGenerator();
+});
+
+buttonReset.addEventListener("click", function(){
+    //Comando che fa chiudere il biglietto generato al reset
+    showTicket.classList.add("ticket-d-none");
+});
+
+function offertaType(selectBody){
+    if ( selectBody.value === "maggiorenne" ) {
+        document.getElementById("offerta-type").innerHTML = `Tariffa Standard`;
+    } else if ( selectBody.value === "minorenne" ) {
+        document.getElementById("offerta-type").innerHTML = `Tariffa Young - 20%`;
+    } else {
+        document.getElementById("offerta-type").innerHTML = `Tariffa Over65 - 40%`;
+    }
+}
+
+function numCarrozzaGenerator(){
+    let x = Math.floor(Math.random() * 11);
+    return x;
+}

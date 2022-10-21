@@ -17,19 +17,19 @@
                     <div class="d-flex justify-sp-evenly">
                         <div>
                             <span>Nome Cognome</span>
-                            <input type="text">
+                            <input type="text" id="full-name-input" style="text-transform: capitalize;">
                         </div>
                         <div>
                             <span>Km da percorrere</span>
-                            <input type="number">
+                            <input type="number" id="km-to-do" min="1">
                         </div>
                         <div>
                             <span>Fascia d'età</span>
-                            <select name="" id="">
-                                <option value="" selected disabled hidden>Seleziona</option>
-                                <option value="">Maggiorenne</option>
-                                <option value="">Minorenne</option>
-                                <option value="">Over 65</option>
+                            <select name="" id="select-body">
+                                <option value="default" selected disabled hidden>Seleziona</option>
+                                <option value="maggiorenne">Maggiorenne</option>
+                                <option value="minorenne">Minorenne</option>
+                                <option value="over65">Over 65</option>
                             </select>
                         </div>
                     </div>
@@ -37,25 +37,30 @@
 
                     <!-- Parte bottom del form -->
                     <div class="buttons-section d-flex">
-                        <button type="button" class="btn">Genera</button>
-                        <button type="reset" class="btn">Annulla</button>
+                        <button type="button" class="btn" id="button-generator">Genera</button>
+                        <button type="reset" class="btn" id="button-reset">Annulla</button>
                     </div>
                     <!-- /Parte bottom del form -->
                 </form>
                 <!-- Parte generatore prezzo biglietto -->
 
                 <!-- Parte biglietto generato -->
-                <div class="ticket">
+                <div class="ticket-d-none" id="show-ticket">
                     <h2>IL TUO BIGLIETTO</h2>
                     <div class="interface-generator">
                         <p class="f-bold m-l-20">DETTAGLIO PASSEGGERI</p>
                         <div class="info-container d-flex">
                             <div class="customer-name">
                                 <h4>NOME PASSEGGERO</h4>
+                                <div id="customer-name"></div>
                             </div>
                             <div class="ticket-details d-flex">
-                                <div class="f-bold">Offerta</div>
-                                <div class="f-bold">Carrozza</div>
+                                <div class="f-bold">Offerta
+                                    <div id="offerta-type"></div>
+                                </div>
+                                <div class="f-bold">Carrozza
+                                    <div id="carrozza-number"></div>
+                                </div>
                                 <div class="f-bold">Codice CP</div>
                                 <div class="f-bold">Costo biglietto</div>
                             </div>
