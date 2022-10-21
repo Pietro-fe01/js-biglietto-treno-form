@@ -55,7 +55,8 @@ buttonGenerator.addEventListener("click", function(){
     // Funzione che genera il Codice CP tra 90000 e 99999
     document.getElementById("cp-code").innerHTML = cpCodeGenerator();
 
-    totalCost();
+    // Funzione che calcola il prezzo finale in base alla fascia d'età e i km scelti
+    document.getElementById("final-cost").innerHTML = totalCost(kmToDo, selectBody);
 });
 
 buttonReset.addEventListener("click", function(){
@@ -65,7 +66,7 @@ buttonReset.addEventListener("click", function(){
 
 function offertaType(selectBody){
     if ( selectBody.value === "maggiorenne" ) {
-        document.getElementById("offerta-type").innerHTML = `Tariffa Standard`;
+        document.getElementById("offerta-type").innerHTML = `Tariffa Standard`; 
     } else if ( selectBody.value === "minorenne" ) {
         document.getElementById("offerta-type").innerHTML = `Tariffa Young - 20%`;
     } else {
@@ -81,4 +82,18 @@ function numCarrozzaGenerator(){
 function cpCodeGenerator(){
     let x = Math.floor(Math.random() * 9999) + 90000;
     return x;
+}
+
+function totalCost(kmToDo, selectBody){
+    let price;
+    if ( selectBody.value === "maggiorenne" ) {
+        price = 0.21 * kmToDo;
+        return price;
+    } else if ( selectBody.value === "minorenne" ) {
+        price = (0.21 * kmToDo) - (0.21 * kmToDo * 0.2);
+        return price.toFixed(2);
+    } else {
+        price = (0.21 * kmToDo) - (0.21 * kmToDo * 0.4);
+        return price.toFixed(2);
+    } 
 }

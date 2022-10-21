@@ -127,3 +127,9 @@ main {
 .ticket-d-none{
     display: none;
 }
+
+.ticket-details > div{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
