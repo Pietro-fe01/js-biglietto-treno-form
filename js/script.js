@@ -26,7 +26,6 @@ const buttonReset = document.getElementById("button-reset");
 
 let showTicket = document.getElementById("show-ticket");
 
-let price;
 
 buttonGenerator.addEventListener("click", function(){
     const fullName = document.getElementById("full-name-input").value;
@@ -52,6 +51,11 @@ buttonGenerator.addEventListener("click", function(){
 
     // Funzione che genera un numero random da 0 a 10 e lo stampa nella voce carrozza
     document.getElementById("carrozza-number").innerHTML = numCarrozzaGenerator();
+
+    // Funzione che genera il Codice CP tra 90000 e 99999
+    document.getElementById("cp-code").innerHTML = cpCodeGenerator();
+
+    totalCost();
 });
 
 buttonReset.addEventListener("click", function(){
@@ -70,6 +74,11 @@ function offertaType(selectBody){
 }
 
 function numCarrozzaGenerator(){
-    let x = Math.floor(Math.random() * 11);
+    let x = Math.floor(Math.random() * 10) + 1;
+    return x;
+}
+
+function cpCodeGenerator(){
+    let x = Math.floor(Math.random() * 9999) + 90000;
     return x;
 }
