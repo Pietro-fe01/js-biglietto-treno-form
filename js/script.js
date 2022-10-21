@@ -35,7 +35,9 @@ buttonGenerator.addEventListener("click", function(){
     //Comando che fa aprire o chiudere il biglietto generato
     if ( fullName === ""){
         alert("Attenzione! Il campo 'Nome Cognome' non può essere lasciato vuoto.");
-    } else if ( kmToDo === 0){
+    } else if ( /[0-9]/.test(fullName) ){
+        alert("Attenzione! Il campo 'Nome Cognome' non può contenere numeri.");
+    }else if ( kmToDo === 0){
         alert("Attenzione! Il campo 'Km da percorrere' non può essere lasciato vuoto.");
     } else if (selectBody.value === "default"){
         alert("Attenzione! Seleziona una fascia di età.");

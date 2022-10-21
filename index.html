@@ -10,68 +10,72 @@
     <body>
         <main>
             <div class="container">
-                <!-- Parte generatore prezzo biglietto -->
-                <h1>CALCOLA IL PREZZO DEL TUO BIGLIETTO</h1>
-                <form action="" class="interface-generator">
-                    <!-- Parte top del form -->
-                    <div class="d-flex justify-sp-evenly">
-                        <div>
-                            <span>Nome Cognome</span>
-                            <input type="text" id="full-name-input" style="text-transform: capitalize;">
-                        </div>
-                        <div>
-                            <span>Km da percorrere</span>
-                            <input type="number" id="km-to-do" min="1">
-                        </div>
-                        <div>
-                            <span>Fascia d'età</span>
-                            <select name="" id="select-body">
-                                <option value="default" selected disabled hidden>Seleziona</option>
-                                <option value="maggiorenne">Maggiorenne</option>
-                                <option value="minorenne">Minorenne</option>
-                                <option value="over65">Over 65</option>
-                            </select>
-                        </div>
-                    </div>
-                    <!-- /Parte top del form -->
-
-                    <!-- Parte bottom del form -->
-                    <div class="buttons-section d-flex">
-                        <button type="button" class="btn" id="button-generator">Genera</button>
-                        <button type="reset" class="btn" id="button-reset">Annulla</button>
-                    </div>
-                    <!-- /Parte bottom del form -->
-                </form>
-                <!-- Parte generatore prezzo biglietto -->
-
-                <!-- Parte biglietto generato -->
-                <div class="ticket-d-none" id="show-ticket">
-                    <h2>IL TUO BIGLIETTO</h2>
-                    <div class="interface-generator">
-                        <p class="f-bold m-l-20">DETTAGLIO PASSEGGERI</p>
-                        <div class="info-container d-flex">
-                            <div class="customer-name">
-                                <h4>NOME PASSEGGERO</h4>
-                                <div id="customer-name" class="f-bold"></div>
+                <!-- Generatore biglietto - top -->
+                <section>
+                    <h1>CALCOLA IL PREZZO DEL TUO BIGLIETTO</h1>
+                    <form action="" class="interface-generator">
+                        <!-- Parte top del form -->
+                        <div class="d-flex justify-sp-evenly">
+                            <div>
+                                <span>Nome Cognome</span>
+                                <input type="text" id="full-name-input" style="text-transform: capitalize;">
                             </div>
-                            <div class="ticket-details d-flex">
-                                <div class="f-bold">Offerta
-                                    <div id="offerta-type"></div>
-                                </div>
-                                <div class="f-bold">Carrozza
-                                    <div id="carrozza-number"></div>
-                                </div>
-                                <div class="f-bold">Codice CP
-                                    <div id="cp-code"></div>
-                                </div>
-                                <div class="f-bold">Costo biglietto
-                                    <div id="final-cost"></div>
-                                </div>
+                            <div>
+                                <span>Km da percorrere</span>
+                                <input type="number" id="km-to-do" min="1">
+                            </div>
+                            <div>
+                                <span>Fascia d'età</span>
+                                <select name="" id="select-body">
+                                    <option value="default" selected disabled hidden>Seleziona</option>
+                                    <option value="maggiorenne">Maggiorenne</option>
+                                    <option value="minorenne">Minorenne</option>
+                                    <option value="over65">Over 65</option>
+                                </select>
                             </div>
                         </div>
+                        <!-- /Parte top del form -->
+
+                        <!-- Parte bottom del form -->
+                        <div class="buttons-section d-flex">
+                            <button type="button" class="btn" id="button-generator">Genera</button>
+                            <button type="reset" class="btn" id="button-reset">Annulla</button>
+                        </div>
+                        <!-- /Parte bottom del form -->
+                    </form>
+                </section>
+                <!-- /Generatore biglietto - top -->
+                
+                <!-- Biglietto generato - bottom -->
+                <section>
+                    <div class="ticket-d-none" id="show-ticket">
+                        <h2>IL TUO BIGLIETTO</h2>
+                        <div class="interface-generator">
+                            <p class="f-bold m-l-20">DETTAGLIO PASSEGGERI</p>
+                            <div class="info-container d-flex">
+                                <div class="customer-name">
+                                    <h4>NOME PASSEGGERO</h4>
+                                    <div id="customer-name" class="f-bold"></div>
+                                </div>
+                                <div class="ticket-details d-flex">
+                                    <div class="f-bold">Offerta
+                                        <div id="offerta-type"></div>
+                                    </div>
+                                    <div class="f-bold">Carrozza
+                                        <div id="carrozza-number"></div>
+                                    </div>
+                                    <div class="f-bold">Codice CP
+                                        <div id="cp-code"></div>
+                                    </div>
+                                    <div class="f-bold">Costo biglietto
+                                        <div id="final-cost"></div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
                     </div>
-                </div>
-                <!-- /Parte biglietto generato -->
+                </section>
+                <!-- /Biglietto generato - bottom -->
             </div>
         </main>
 
