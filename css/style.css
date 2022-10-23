@@ -125,6 +125,17 @@ main .container {
     font-weight: bold;
 }
 
+#interface-top{
+    position: relative;
+}
+
+#logo-treno{
+    width: 15%;
+    position: absolute;
+    bottom: .3125rem;
+    right: .625rem;
+}
+
 .buttons-section{
     justify-content: center;
 }
