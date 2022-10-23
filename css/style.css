@@ -38,6 +38,11 @@
     margin: 2.1875rem .625rem 0 .625rem; 
 }
 
+.container {
+    width: 62.5rem;
+    margin: auto;
+}
+
 /*------------
   TYPOGRAPHY 
 ------------*/
@@ -51,18 +56,41 @@ h1, h2{
     padding: .9375rem 0;
 }
 
+/*--------------
+    HEADER
+----------------*/
+header {
+    background-color: #E6E6E6;
+    padding: .3125rem 0;
+}
+
+header ul{
+    list-style: none;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+header ul a{
+    text-decoration: none;
+    color: black;
+    font-weight: 550;
+}
+
 /*------------
     MAIN  
 ------------*/
 main {
     display: flex;
-    height: 100vh;
+    height: calc(100vh - 28.4px - 160px);
+    overflow-y: auto;
+    background-image: url("https://www.trenitalia.com/content/dam/tcom/restyling/homepage/1920x410/1920x410-ICG-Biciclette-11.jpg");
+    background-size: cover;
+    background-position: center;
 }
 
-.container {
-    width: 62.5rem;
-    margin: auto;
-    background-color: #b91450;
+main .container {
+    background-color: rgba(185, 20, 80, 0.8);
 }
 
 .interface-generator{
@@ -136,4 +164,55 @@ main {
     display: flex;
     flex-direction: column;
     justify-content: space-between;
+}
+
+/*--------------
+    FOOTER
+----------------*/
+footer{
+    background: transparent linear-gradient(180deg,#b2b2b2 0,#444 100%);
+    height: 160px;
+    color: white;
+}
+
+footer .container{
+    display: flex;
+}
+
+footer .container div{
+    margin-right: 100px;
+}
+
+footer ul{
+    list-style: none;
+}
+
+footer .follow-us{
+    display: flex;
+}
+
+footer h2{
+    text-align: left;
+}
+
+footer ul li a{
+    text-decoration: none;
+    color: white;
+}
+
+footer ul li a i{
+    color: black;
+    background-color: white;
+    border-radius: 50%;
+    padding: .3125rem;
+    min-width: 1.875rem;
+    text-align: center;
+    margin-right: .625rem;
+}
+
+/*--------------
+    EFFECTS
+----------------*/
+nav ul a:hover{
+    text-decoration: underline;
 }
