@@ -1,3 +1,5 @@
+"use strict";
+
 /*Scrivere un programma che chieda all’utente:
 - Il numero di chilometri da percorrere
 - Età del passeggero
@@ -90,12 +92,12 @@ function totalCost(kmToDo, selectBody){
     let price;
     if ( selectBody.value === "maggiorenne" ) {
         price = 0.21 * kmToDo;
-        return parseFloat(price).toFixed(2);
+        return price.toFixed(2);
     } else if ( selectBody.value === "minorenne" ) {
         price = (0.21 * kmToDo) - (0.21 * kmToDo * 0.2);
-        return parseFloat(price).toFixed(2);
+        return price.toFixed(2);
     } else {
         price = (0.21 * kmToDo) - (0.21 * kmToDo * 0.4);
-        return parseFloat(price).toFixed(2);
+        return price.toFixed(2);
     } 
 }
